@@ -1,5 +1,6 @@
 body{
     font-family: 'Noto Sans KR', sans-serif;
+ 
 }
 .inner{
   width:100%;
@@ -7,22 +8,27 @@ body{
   margin:0 auto;  
   padding:0 15px;
 }
-@media screen and (min-width:1024px){
-.d-none{
-  display:none;
-}   
+@media (min-width:1025px){
+  .d-none{
+   display:none;
+  }   
 }
-@media screen and (max-width:1024px){
+@media (max-width:1024px){
   .d-only{
     display:none;
    
   }
 
- 
 }
 
-@media screen and (min-width:640px){
+@media (min-width:461px){
   .m-only{
     display:block;
+  }
+
+}
+@media (max-width:1024px) and (min-width:461px){
+  .t-none{
+    display:none;
   }
 }
