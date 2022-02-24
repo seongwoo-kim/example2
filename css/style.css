@@ -19,7 +19,7 @@ header{
   z-index:101;
 }
 .builcon_main_logo{
-  width:205px;
+  width:205px;  
 }
 
 .builcon_menu{
@@ -50,12 +50,15 @@ header{
   color:#fff;
 }
 .builcon_menu_bar{
-  border:1px solid blue;
-  width:30px;
-  height:30px;
+  display: flex;
+  justify-content:space-between;
+  flex-direction:column;
   z-index:101;
 }
 
+
+
+ 
 @media screen and (max-width:1024px){
   header{
   
@@ -77,6 +80,14 @@ header{
   .builcon_menu{
     display:none;
   }
+
+  .builcon_menu_bar .menu_line{
+    width: 30px;
+    height: 2px;
+    background: #FFF;
+    margin: 3px 0;
+    top: 5px;
+  }
   
 
 }
@@ -96,7 +107,19 @@ header{
   right:0;
   transition: right 0.4s ease-in-out;
 }
-
+.builcon_mobile_menu{
+  color:#fff;
+  font-size:18px;
+  font-weight:500;
+  padding:100px 30px 30px;
+  text-align:center;  
+}
+.builcon_mobile_sub_menu{
+  margin-bottom:30px;
+}
+.builcon_mobile_sub_menu:hover > a{
+  border-bottom:3px solid #fff;
+}
 
 
 /* main */  
@@ -301,8 +324,9 @@ font-weight:800;
   text-align:left;
   color:#fff;
   }
-.pr_box_wrap:last-child > .text_wrap{
+.pr_box_wrap:last-child .text_wrap{
   bottom:60px;
+ 
 }
 .text_wrap > p{
     padding:15px 0 15px 0;
@@ -462,7 +486,7 @@ font-weight:800;
     right:20px;
     top:33px;
   }
-  
+ 
 }
 @media screen and (max-width:460px){
   .pr_box{
