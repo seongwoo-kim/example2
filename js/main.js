@@ -1,27 +1,15 @@
-// const navEl = document.querySelector(".builcon_menu_bar");
-// const navEl2 = document.querySelector(".mobile-nav");
 
-
-// function mother(){
-//   navEl.addEventListener('click',function () {
-//     navEl2.classList.add('active')
-//   })
-// }
-
-const navEl = document.querySelector('.mobile-nav')
-const navBtn = document.querySelector('.builcon_menu_bar')
+const navEl = document.querySelector('.mobile-nav');
+const navBtn = document.querySelector('.builcon_menu_bar');
 let activeExistence = false;
-navBtn.addEventListener('click',function(){
-  activeExistence = !activeExistence
+navBtn.addEventListener('click', function() {
   if(activeExistence){
-    navEl.classList.add('active');
-  }else{
     navEl.classList.remove('active');
+    navBtn.classList.remove('active');
+  }else{
+    navEl.classList.add('active');
+    navBtn.classList.add('active');
   }
 
+  activeExistence = !activeExistence;
 })
-
-
-
-
-

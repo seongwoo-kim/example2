@@ -10,7 +10,8 @@ body{
 }
 @media (min-width:1025px){
   .d-none{
-   display:none;
+   display:none !important;
+   
   }   
 }
 @media (max-width:1024px){

@@ -81,14 +81,32 @@ header{
     display:none;
   }
 
-  .builcon_menu_bar .menu_line{
+  .builcon_menu_bar .menu_line {
     width: 30px;
     height: 2px;
     background: #FFF;
     margin: 3px 0;
     top: 5px;
+   
   }
   
+  .builcon_menu_bar.active .menu_line:nth-child(1){
+    transform:rotate(-45deg) translate(0,11px);
+    transition:transform 0.4s;
+  }
+  .builcon_menu_bar.active .menu_line:nth-child(2){
+    background:transparent;
+  }
+  .builcon_menu_bar.active .menu_line:nth-child(3){
+    transform:rotate(45deg) translate(0,-11px);
+    transition:transform 0.4s;
+  }
+  .builcon_menu_bar .menu_line:nth-child(1){
+    transition:transform 0.4s;
+  }
+  .builcon_menu_bar .menu_line:nth-child(3){
+    transition:transform 0.4s;
+  }
 
 }
 
@@ -290,6 +308,7 @@ font-weight:800;
 .pr_box{
   display:flex;
   width:680px;
+  align-items:flex-start;
   margin-right:35px;
 }
 .pr_box_wrap{
@@ -298,6 +317,9 @@ font-weight:800;
 }
 .pr_box_wrap:first-child{
   margin-top:-40px;
+}
+.pr_box_wrap:first-child .wh_next_bar{
+  padding-top:44px;
 }
 .pr_box_wrap:last-child{
   margin-top:40px;
@@ -449,6 +471,7 @@ font-weight:800;
   .pr_box_wrap:last-child{
   margin-top:0;
   }
+  
   .pr_box_container{
     height:200px;
   }
@@ -459,15 +482,22 @@ font-weight:800;
   .pr_box_image{
     margin-top:-200px;
   }
+  /* 밑에 .text_wrap은 둘의 bottom의 값이 같아야 된다. */
+  .pr_box_wrap:last-child .text_wrap {
+    bottom:38px;
+    }
+    
   .text_wrap{
     bottom:38px;
   }
+  
   .pr_box_title{
     font-size:30px;
   }
   .text_wrap p{
     font-size:14px;
   }
+  
   .pr_box_explain{
     margin:0;
     width:100%;
